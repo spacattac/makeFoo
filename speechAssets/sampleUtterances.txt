@@ -1,0 +1,5 @@
+MakeFooIntent say foo
+MakeFooIntent give me a foo
+MakeFooIntent let me hear a foo
+MakeFooIntent let me hear {numberOf} foos
+AMAZON.HelpIntent what do I do
