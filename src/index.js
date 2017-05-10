@@ -63,7 +63,7 @@ function onIntent(intentRequest, session, callback) {
     var intentName = intentRequest.intent.name;
 
     // dispatch custom intents to handlers here
-    if (intentName === "MakeFooIntet") {
+    if (intentName === "MakeFooIntent") {
         handleMakeFooRequest(intent, session, callback);
     }
     else if (intentName === "AMAZON.HelpIntent") {
