@@ -107,7 +107,9 @@ function getWelcomeResponse(callback) {
 
 function handleMakeFooRequest(intent, session, callback) {
     
-    var numberOf = intent.slots.numberOf || 1;
+    var numberOf = intent.slots.numberOf.value || 1;
+    console.log("numberOf: " + numberOf);
+
     var maxFoo = 5;
     var maxedOut = false;
 
@@ -118,12 +120,14 @@ function handleMakeFooRequest(intent, session, callback) {
 
     var result = [];
     for (i = 0; i < numberOf; i++) { 
-        result.push("Foo");    
+        result.push(foo);    
     }
     if (maxedOut)
         result.push("You get the point");
 
-    var speechOutput = result.join(".  ");
+    var speechOutput = result.join(".  ") + ".";
+    console.log(speechOutput);
+
     var header = "Make Foo Test";
 
     callback(session.attributes, buildSpeechletResponse(header, speechOutput, "", false));
