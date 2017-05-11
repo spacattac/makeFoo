@@ -1,5 +1,13 @@
 {
-  "intents": [
+  "intents": [    {
+      "intent": "MakeFooIntent",
+      "slots": [
+        {
+          "name": "numberOf",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
     {
       "intent": "AMAZON.CancelIntent"
     },
@@ -8,15 +16,6 @@
     },
     {
       "intent": "AMAZON.StopIntent"
-    },
-    {
-      "slots": [
-        {
-          "name": "numberOf",
-          "type": "AMAZON.NUMBER"
-        }
-      ],
-      "intent": "MakeFooIntent"
     }
   ]
 }
