@@ -92,9 +92,9 @@ function onSessionEnded(sessionEndedRequest, session) {
 
 function getWelcomeResponse(callback) {
     
-    var speechOutput = "Welcome to Make Foo Test.  I will say foo when commanded to do so.";
+    var speechOutput = "Welcome to Make Foo.  I will say foo when commanded to do so.";
     var reprompt = "I am ready when you are.";
-    var header = "Make Foo Test";
+    var header = "Make Foo";
     var shouldEndSession = false;
 
     var sessionAttributes = {
@@ -128,7 +128,7 @@ function handleMakeFooRequest(intent, session, callback) {
     var speechOutput = result.join(".  ") + ".";
     console.log(speechOutput);
 
-    var header = "Make Foo Test";
+    var header = "Make Foo";
 
     callback(session.attributes, buildSpeechletResponse(header, speechOutput, "", false));
 
@@ -140,7 +140,7 @@ function handleGetHelpRequest(intent, session, callback) {
         session.attributes = {};
     }
 
-    var speechOutput = "";
+    var speechOutput = "It's very easy, ask me to say foo";
     var reprompt = speechOutput;
     var shouldEndSession = false;
 
